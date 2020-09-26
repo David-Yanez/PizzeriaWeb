@@ -2,19 +2,29 @@
 
 const pedidoCtrl = {}
 const Pedido = require('../models/Pedido')
+const Producto = require('../models/Producto')
 
 
 pedidoCtrl.getPedidos = async (req, res) => {
-    const pedidos = await Pedido.find()
+  
+await Pedido.find({})
+.populate('productos.producto')
+.exec((err, pedidos) => {
+res.json(pedidos)
+});
+
+  /*  const pedidos = await Pedido.find()
     res.json(pedidos)
-    res.send('Obtener Pedidos')
+
+    res.send('Obtener Pedidos')*/
 };
 
 pedidoCtrl.createPedido = async(req, res) => {
    console.log(req.body)
-  /*  const newPedido = new Pedido(req.body)
+    const newPedido = new Pedido(req.body)
+
     await newPedido.save()
-    res.send({message: 'Pedido Creado'})*/
+    res.send({message: 'Pedido Creado'})
     res.send('Pedido Creado');
 };
 
