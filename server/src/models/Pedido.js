@@ -4,7 +4,7 @@ const pedidosSchema = new Schema ({
     cliente: {type: String, required:true},
     mesa: {type: String, required:true},
     estado: {type: String, required:true},
-    fecha: {type: String, required:true},
+    fecha: {type: Date, default: Date.now},
     productos: [{
         producto:{
             type: Schema.Types.ObjectId,
