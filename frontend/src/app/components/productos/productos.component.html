@@ -1,13 +1,14 @@
 <div class="container">
     <br>
     <br>
-<h2 class="text-center"s>Registrar Productos</h2>
+<h2 class="text-center">Registrar Productos</h2>
 <br>
 <br>
 
 <form #productoForm="ngForm" (ngSubmit)= "addProducto(productoForm)">
 <div class="card">
    <div class="row">
+     <input type="hidden" name="_id" #id="ngModel" [(ngModel)]="productoService.selectedProducto._id">
        <div class="col-12">
         <div class="input-group">
             <div class="input-group-prepend">
@@ -86,4 +87,31 @@
 
 
 
+</div>
+
+<div class="container-fluid">
+  <br>
+  <br>
+  <h4 class="text-center"> Tabla de Productos</h4>
+  <table class="table table-hover">
+    <thead>
+      <th>Nombre</th>
+      <th>Categoria</th>
+      <th>Descripcion</th>
+      <th>Precio $</th>
+      <th>Operaciones</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productoService.productos">
+        <td>{{producto.nombre}}</td>
+        <td>{{producto.categoria}}</td>
+        <td>{{producto.descripcion}}</td>
+        <td>{{producto.precio}}</td>
+        <td>
+          <a  class="btn" (click)="editProducto(producto)">Editar </a>
+          <a class="btn" (click)="deleteProducto">  Eliminar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

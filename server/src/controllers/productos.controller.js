@@ -9,8 +9,14 @@ productoCtrl.getProductos = async (req, res) => {
     res.send('Obtener Productos')
 }
 productoCtrl.createProductos = async (req, res) => { 
-    const newProducto = new Producto(req.body)
-    await newProducto.save()
+    const newProducto = new Producto({
+        nombre: req.body.nombre,
+        categoria: req.body.categoria,
+        descripcion: req.body.descripcion,
+        imagen: req.body.imagen,
+        precio: req.body.precio
+    });
+    await newProducto.save();
     res.send({message: 'Producto Creado'})
 };
 productoCtrl.getProducto = async (req, res) => {

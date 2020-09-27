@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ProductoService} from '../../services/producto.service';
 import { NgForm } from '@angular/forms';
 import { Producto } from 'src/app/models/producto';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-productos',
@@ -15,17 +16,44 @@ export class ProductosComponent implements OnInit {
 
   ngOnInit(): void {
 
-    
+    this.getProductos();
   }
 
 addProducto(form: NgForm){
-  this.productoService.postProducto(form.value)
+
+if (form.value._id){
+  this.productoService.putProducto(form.value)
   .subscribe(res =>{
+    this.resetForm(form);
+    this.getProductos();
     console.log(res);
   })
-  console.log(form.value);
+} else {
 
+  this.productoService.postProducto(form.value)
+  .subscribe(res =>{
+    this.resetForm(form);
+    this.getProductos();
+    console.log(res);
+  });
+  //console.log(form.value);
 }
+}
+
+
+getProductos(){
+  this.productoService.getProductos()
+  .subscribe(res => {
+    this.productoService.productos = res as Producto[];
+    console.log(res);
+  })
+}
+
+editProducto(producto: Producto){
+  this.productoService.selectedProducto = producto;
+}
+
+
 
   resetForm (form?: NgForm){
 if (form){
