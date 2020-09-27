@@ -12,7 +12,9 @@ selectedPedido: Pedido;
 pedidos: Pedido[];
 readonly URL_API = 'http://localhost:3000/api/pedidos';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    this.selectedPedido= new Pedido();
+  }
 
   getPedidos(){
     return this.http.get(this.URL_API);

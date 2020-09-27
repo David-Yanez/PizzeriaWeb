@@ -15,8 +15,7 @@ export class ProductoService {
   constructor(private http: HttpClient) { 
     this.selectedProducto = new Producto();
   }
-
-
+ 
   getProductos(){
     return this.http.get(this.URL_API);
   }

@@ -5,6 +5,7 @@
 <br>
 <br>
 
+<form #productoForm="ngForm" (ngSubmit)= "addProducto(productoForm)">
 <div class="card">
    <div class="row">
        <div class="col-12">
@@ -12,20 +13,18 @@
             <div class="input-group-prepend">
             <span class="input-group-text" >Nombre: </span>
             </div>
-            <input type="text" class="form-control"  >
+            <input type="text" class="form-control" name="nombre" #nombre= "ngModel" [(ngModel)]="productoService.selectedProducto.nombre">
             </div>
 
        </div>
 
+
        <div class="col-12">
         <br>
         <br>
-         <select id="inputState" class="form-control">
+         <select id="inputState" class="form-control" name="categoria" [(ngModel)]="opcionSeleccionado"  (change)="capturar()" >
            <option selected>Categoria</option>
-           <option>Pizzas</option>
-           <option>Bebidas</option>
-           <option>Entradas</option>
-           <option>Lasañas</option>
+           <option  *ngFor="let dato of datos">{{dato}}</option>
          </select>
        </div>
 
@@ -36,7 +35,7 @@
             <div class="input-group-prepend">
             <span class="input-group-text" >Descripcion: </span>
             </div>
-            <input type="text" class="form-control"  >
+            <input type="text" class="form-control" name="descripcion" #descripcion= "ngModel" [(ngModel)]="productoService.selectedProducto.descripcion"  >
             </div>
 
        </div>
@@ -48,7 +47,7 @@
             <div class="input-group-prepend">
             <span class="input-group-text" >Imagen URL: </span>
             </div>
-            <input type="text" class="form-control"  >
+            <input type="text" class="form-control" name="imagen" #imagen= "ngModel" [(ngModel)]="productoService.selectedProducto.imagen" >
             </div>
 
        </div>
@@ -60,7 +59,7 @@
             <div class="input-group-prepend">
             <span class="input-group-text" >Precio: $</span>
             </div>
-            <input type="text" class="form-control"  >
+            <input type="text" class="form-control" name="precio" #precio= "ngModel" [(ngModel)]="productoService.selectedProducto.precio"  >
             </div>
 
        </div>
@@ -69,8 +68,10 @@
        <div class="col-12">
         <br>
         <br>
-      <p class="text-center"><button class="btn btn-primary">Agregar</button></p>
-      </div>
+      <p class="text-center"><button class="btn btn-primary">Guardar</button></p>
+         <button class="btn btn-primary right" (click)='resetForm(productoForm)'>Limpiar</button>
+   
+    </div>
      
 
 
@@ -78,7 +79,9 @@
    </div> 
 
 
+
 </div>
+</form>
 
 
 
