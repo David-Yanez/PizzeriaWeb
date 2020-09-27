@@ -1,0 +1,138 @@
+<div class="conteiner-fluid">
+
+    <h1 class="text-center"> Registro de Pedidos </h1>
+
+    <br>
+    <br>
+ <!--    <form  #pedidoForm = "ngForm" (ngSubmit)="addPedido(pedidoForm)" > -->
+<div class="row">
+<div class="col-6">
+   
+    <div class="input-group">
+    <div class="input-group-prepend">
+    <span class="input-group-text" >Nombre: </span>
+    </div>
+    <input type="text" class="form-control"  >
+    </div>
+</div>
+
+
+
+
+<div class="col-6">
+    <div class="input-group-prepend">
+    <span class="input-group-text" >Fecha: </span>
+    </div>
+</div>
+
+
+<div class="form-group col-6">
+   <br>
+   <br>
+    <select id="inputState" class="form-control">
+      <option selected>Mesa</option>
+      <option>Llevar</option>
+      <option>Mesa 1</option>
+      <option>Mesa 2</option>
+      <option>Mesa 3</option>
+    </select>
+  </div>
+
+
+  <div class="col-6">
+    <br>
+    <br>
+    <legend class="col-form-label ">Estado</legend>
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+        <label class="custom-control-label" for="customRadioInline1">Pendiente</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+        <label class="custom-control-label" for="customRadioInline2">Entregado</label>
+      </div>
+
+  </div>
+
+
+
+
+
+
+<div class="col-6">
+    <br>
+    <br>
+    <select id="inputState" class="form-control">
+      <option selected>Productos</option>
+      <option>Producto 1</option>
+      <option>Producto 2</option>
+    </select>
+  </div>
+
+  <div class="col-6">
+    <br>
+    <br>
+    <div class="input-group">
+        <div class="input-group-prepend">
+        <span class="input-group-text" >Cantidad: </span>
+        </div>
+        <input type="text" class="form-control"  >
+        </div>
+
+  </div>
+
+  <div class="col-6">
+    <br>
+    <div class="input-group">
+        <div class="input-group-prepend">
+        <span class="input-group-text" >Precio: $ </span>
+        </div>
+        <input type="text" class="form-control"  >
+        </div>
+
+  </div>
+  <br>
+  <div class="col-12">
+    <br>
+    <br>
+  <p class="text-center"><button class="btn btn-primary">Agregar</button></p>
+  </div>
+  
+
+</div>
+
+
+<div>
+
+    <br>
+    <br>
+    <label class="text-center" for="">Lista de Productos</label>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Sub total</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+    <thead>
+        <tr>
+            <th colspan="3"></th>
+            <th>Total: </th>
+        </tr>
+    </thead>
+
+</table>
+
+
+</div>
+
+<button class="btn btn-success float-right">Guardar</button>
+
+<!--   </form>  -->
+</div>
+
