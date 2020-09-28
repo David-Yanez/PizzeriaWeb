@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    
+    <div class="row">
+
+<div class="col-md-4" *ngFor="let producto of productos">
+<br>
+<br>
+<div class="card text-center">
+    <div class="card-header ">
+<b>{{producto.nombre}}</b>
+    </div>
+    <img src="{{producto.imagen}}" class="card-img-top" height="200">
+    <div class="card-body">
+<p>{{producto.descripcion}}</p>
+<p>Precio $ {{producto.precio}}</p>
+    </div>
+</div>
+</div>
+
+</div>
+
+
+</div>
+
+

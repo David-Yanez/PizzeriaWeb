@@ -53,6 +53,14 @@ editProducto(producto: Producto){
   this.productoService.selectedProducto = producto;
 }
 
+deleteProducto (_id: string){
+ this.productoService.deleteProducto(_id)
+ .subscribe(res =>{
+   this.getProductos();
+console.log(res)
+ });
+}
+
 
 
   resetForm (form?: NgForm){

@@ -109,7 +109,7 @@
         <td>{{producto.precio}}</td>
         <td>
           <a  class="btn" (click)="editProducto(producto)">Editar </a>
-          <a class="btn" (click)="deleteProducto">  Eliminar</a>
+          <a class="btn" (click)="deleteProducto(producto._id)">  Eliminar</a>
         </td>
       </tr>
     </tbody>

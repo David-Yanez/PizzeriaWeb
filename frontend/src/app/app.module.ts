@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { ProduListComponent } from './components/produ-list/produ-list.component';
+import { ContactosComponent } from './components/contactos/contactos.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { InicioComponent } from './components/inicio/inicio.component';
     AppComponent,
     PedidosComponent,
     ProductosComponent,
-    InicioComponent
+    InicioComponent,
+    ProduListComponent,
+    ContactosComponent
   ],
   imports: [
     BrowserModule,
