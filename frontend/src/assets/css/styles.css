@@ -16,7 +16,7 @@
   body{
     font-family: "yanone", Arial, Helvetica;
     
-    background: url("../img/fondo2.jpg");
+    background: url("../img/fondo.jpg");
     background-attachment: fixed;/*fondo quieto*/
   }
   .clearfix{
@@ -321,7 +321,7 @@
     margin: 0 auto;
     font-family: "yanone", Arial, Helvetica;
     
-    background: url("../img/fondo2.jpg");
+    
     background-attachment: fixed;/*fondo quieto*/
     
   }
