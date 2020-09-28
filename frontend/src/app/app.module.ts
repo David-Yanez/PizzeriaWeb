@@ -10,6 +10,7 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ProduListComponent } from './components/produ-list/produ-list.component';
 import { ContactosComponent } from './components/contactos/contactos.component';
+import{BrowserAnimationsModule} from'@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -19,13 +20,15 @@ import { ContactosComponent } from './components/contactos/contactos.component';
     ProductosComponent,
     InicioComponent,
     ProduListComponent,
-    ContactosComponent
+    ContactosComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
