@@ -1,4 +1,4 @@
-<h1 class="text-center">Bienvenidos</h1>
+<h1 class="text-center" style="color:rgb(111, 0, 255); text-align: center; background-color: rgb(233, 241, 195);">Bienvenidos</h1>
 
 <p></p>
 
@@ -63,22 +63,55 @@
     </ol>
   </aside>
 </section>
+
+  <div>
+  <div id="left" style="color:rgb(111, 0, 255); text-align: center; background-color: rgb(198, 247, 178);">
+    <h3  style="color:rgb(111, 0, 255); text-align: center; background-color: white;">Mision</h3>
+    <p >
+      “Generar un ambiente que permita a nuestros clientes tener una experiencia única mientras disfrutan de comida Saludable y fresca <br/>
+      que además refleja el encadenamiento con emprendimientos y productos locales, servidos con amabilidad y con una sonriSA, convirtiendo <br/>
+      a clientes SAtisfechos en nuestro principal medio de promoción, quienes además desean contar con nuestro producto en sus caSAs, oficinas, <br/>
+      colegios, universidades, fiestas y eventos, por el prestigio que representa, durante todo momento siendo lo más efectivos y eficientes <br/>
+      posibles, con conciencia ambiental, intentando generar la menor cantidad de residuos mediante métodos de reciclaje o innovación.”
+    </p>
+  </div>
+  <div id="right" style="color:rgb(111, 0, 255); text-align: center; background-color: rgb(198, 247, 178);">
+    <h3  style="color:rgb(111, 0, 255); text-align: center; background-color: white;">Vision</h3>
+    <p style="text-align: right">
+      “Conseguir que la marca se posicione en otros sectores y regiones del país impulsando la importancia del    <br/>
+      apoyo a productos nacionales, con el ánimo de expandir la cadena en busca, además, del crecimiento    <br/>
+      profesional de nuestros colaboradores y proveedores, dentro y fuera de la cadena.”  <br/>
+    </p>
+  </div>
+</div>
+<br/>
+<br/>
+<!--/////////////////////-->
+
 <div class="container-fluid">
-    
-    <div class="row">
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+  <h1 class="text-center" style="color: rgb(47, 161, 255);"> -</h1>
+
+  <br>
+  <br>
+  <div class="row">
 
 <div class="col-md-4" *ngFor="let producto of productos">
 <br>
 <br>
 <div class="card text-center">
-    <div class="card-header ">
+  <div class="card-header ">
 <b>{{producto.nombre}}</b>
-    </div>
-    <img src="{{producto.imagen}}" class="card-img-top" height="200">
-    <div class="card-body">
+  </div>
+  <img src="{{producto.imagen}}" class="card-img-top" height="200">
+  <div class="card-body">
 <p>{{producto.descripcion}}</p>
-
-    </div>
+<p>Precio $ {{producto.precio}}</p>
+  </div>
 </div>
 </div>
 
