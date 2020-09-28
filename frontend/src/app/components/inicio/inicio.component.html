@@ -1,1 +1,88 @@
-<p>inicio works!</p>
+<h1 class="text-center">Bienvenidos</h1>
+
+<p></p>
+
+<section class="carousel" aria-label="Gallery">
+  <ol class="carousel__viewport">
+    <li id="carousel__slide1"
+        tabindex="0"
+        class="carousel__slide">
+      <div class="carousel__snapper">
+        <a href='https://www.comedera.com/wp-content/uploads/2014/04/como-hacer-pizza-facil-en-casa.jpg?width=1200&enable=upscale'
+           class="carousel__prev">Go to last slide</a>
+        <a href="#carousel__slide2"
+           class="carousel__next">Go to next slide</a>
+      </div>
+    </li>
+    <li id="carousel__slide2"
+        tabindex="0"
+        class="carousel__slide">
+      <div class="carousel__snapper"></div>
+      <a href="#carousel__slide1"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide3"
+         class="carousel__next">Go to next slide</a>
+    </li>
+    <li id="carousel__slide3"
+        tabindex="0"
+        class="carousel__slide">
+      <div class="carousel__snapper"></div>
+      <a href="#carousel__slide2"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide4"
+         class="carousel__next">Go to next slide</a>
+    </li>
+    <li id="carousel__slide4"
+        tabindex="0"
+        class="carousel__slide">
+      <div class="carousel__snapper"></div>
+      <a href="#carousel__slide3"
+         class="carousel__prev">Go to previous slide</a>
+      <a href="#carousel__slide1"
+         class="carousel__next">Go to first slide</a>
+    </li>
+  </ol>
+  <aside class="carousel__navigation">
+    <ol class="carousel__navigation-list">
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide1"
+           class="carousel__navigation-button">Go to slide 1</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide2"
+           class="carousel__navigation-button">Go to slide 2</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide3"
+           class="carousel__navigation-button">Go to slide 3</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide4"
+           class="carousel__navigation-button">Go to slide 4</a>
+      </li>
+    </ol>
+  </aside>
+</section>
+<div class="container-fluid">
+    
+    <div class="row">
+
+<div class="col-md-4" *ngFor="let producto of productos">
+<br>
+<br>
+<div class="card text-center">
+    <div class="card-header ">
+<b>{{producto.nombre}}</b>
+    </div>
+    <img src="{{producto.imagen}}" class="card-img-top" height="200">
+    <div class="card-body">
+<p>{{producto.descripcion}}</p>
+
+    </div>
+</div>
+</div>
+
+</div>
+
+
+</div>

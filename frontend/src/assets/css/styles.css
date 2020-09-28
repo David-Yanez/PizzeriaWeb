@@ -1,0 +1,499 @@
+/*importar fuentes externas personalizadas*/
+@font-face {
+    font-family: "finger";
+    src:url("fonts/finger.ttf");
+  }@font-face {
+    font-family: "finger";
+    src:url("fonts/finger.ttf");
+  }
+  /*Generales*/
+  
+  /*todos los elementos*/
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+  body{
+    font-family: "yanone", Arial, Helvetica;
+    
+    background: url("../img/fondo2.jpg");
+    background-attachment: fixed;/*fondo quieto*/
+  }
+  .clearfix{
+    float: center;
+    clear: both;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+    color:green;
+    background-color:whitesmoke;
+  }
+  /*barra de navegación / header*/
+  header{
+    display: block;
+    width: 10%;
+    height: 20px;
+    background: rgba(53,103,164,0.8);
+    position: fixed;
+    text-transform: uppercase;
+  }
+  
+  header a{
+    display: block;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: inherit;
+    text-decoration: none;
+    color: white;
+    transition: all 100ms;
+  }
+  header a:hover,
+  .actived {
+    background: rgba(0,0,0,0.8);
+  }
+  /*logotipo*/
+  #logo{
+    font-family: "finger";
+    font-size: 30px;
+  }
+  #logo a{
+    transition: color 500ms, transform 500ms;
+  }
+  header #logo a:hover{
+    background: transparent;
+    color: black;
+    transform: scale(1.50,1.50);
+  }
+  /*contenedor principal*/
+  #content{
+    min-height: 600px;
+    height: auto;
+    width: 75%;
+    margin: 0px auto;
+    box-shadow: 0px 0px 40px black;
+    border-left: 1px solid #b7b7b7;
+    border-right: 1px solid #b7b7b7;
+    background: rgba(255,255,255,0.7);
+    padding-top: 120px;
+  }
+  /*footer*/
+  footer{
+    width: 75%;
+    margin: 0px auto;
+    padding-top: 15px;
+    color: rgba(0,0,0,0.5);
+  }
+  /*sobre mi*/
+  #title{
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+  #title h1{
+    font-family: finger;
+    font-size: 60px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+  }
+  title h2{
+    font-size: 25px;
+    color: gray;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  article.about{
+    width: 70%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    font-size: 23px;
+  }
+  .about h2{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+  .about p{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: justify;
+  }
+  /*seccion con formulario*/
+  .container{
+    padding: 50px;
+    padding-top: 10px;
+  }
+  .container .image{
+    float: left;
+    width: 49%;
+  }
+  .container .image img{
+    width: 100%;
+  }
+  .container .data{
+    float: left;
+    width: 47%;
+    margin-left: 30px;
+  }
+  .container h2{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  .myestilo{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+  }
+ 
+  
+		
+		
+  form{
+    justify-content: center;
+    width: 60%;
+     /*display: inline-block;*/
+     
+    text-align: center;
+        
+    /*IMPORTANTE*/
+    display: flex;
+    
+    align-items: center;
+  }
+  form label{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="email"],
+  form textarea{
+    width: 40%;
+    padding: 5px;
+  }
+  form button,
+  form input[type="submit"],
+  .button-edit,
+  .button-delete{
+    display: block;
+    font-size: 17px;
+    padding: 10px;
+    margin-top: 15px;
+    color: white;
+    background: rgba(53,103,164,1);
+    border: 1px solid rgba(13,67,133,1);
+    cursor: pointer;
+  }
+  .button-edit,
+  .button-delete {
+    width: 30%;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  .button-edit{
+    background: orange;
+    border: none;
+  }
+  .button-delete {
+    background: red;
+    border: none;
+  }
+  form button:hover,
+  form input[type="submit"]:hover{
+    background: rgba(53,103,164,0.8);
+    border: 1px solid rgba(13,67,133,1);
+  }
+  form input[disabled]{
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .form_error{
+    font-size: 13px;
+    padding: 3px;
+    background: red;
+    color: white;
+    margin-left: 5px;
+  }
+  .message{
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #eee;
+  }
+  .success{
+    background: green;
+    color: white;
+  }
+  .message a{
+    color: white;
+  }
+  .failed{
+    background: red;
+    color: white;
+  }
+  /*pagina de proyectos*/
+  .project{
+    list-style: none;
+    display: block;
+    float: left;
+    width: 28%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+  .project .image{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+  }
+  .project img{
+    width: 100%;
+  }
+  .project a{
+    text-decoration: none;
+    color: black;
+  }
+  .confirm{
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+
+
+
+  /*/////////////////////*/
+  @keyframes tonext {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: 20%;
+    }
+    98% {
+      left: 20%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -300%;
+    }
+    98% {
+      left: -300%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+  }
+  
+  body {
+    max-width: 1900px;
+    margin: 0 auto;
+    font-family: "yanone", Arial, Helvetica;
+    
+    background: url("../img/fondo2.jpg");
+    background-attachment: fixed;/*fondo quieto*/
+    
+  }
+  
+  * {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+  
+  * {
+    -ms-overflow-style: none;
+  }
+  
+  ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carousel {
+    position: relative;
+    padding-top: 20%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+  }
+  
+  .carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    
+    counter-increment: item;
+    background: url("https://cdn.kiwilimon.com/recetaimagen/13003/th5-640x426-5707.jpg");
+  }
+  
+  .carousel__slide:nth-child(even) {
+    background-color: #99f;
+    background: url("../img/pizza1.jpg");
+  }
+  
+  
+  
+  .carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+  
+  @media (hover: hover) {
+    .carousel__snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+  
+    .carousel__slide:last-child .carousel__snapper {
+      animation-name: tostart, snap;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+      animation-name: none;
+    }
+  }
+  
+  .carousel:hover .carousel__snapper,
+  .carousel:focus-within .carousel__snapper {
+    animation-name: none;
+  }
+  
+  .carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+  
+  .carousel__navigation-list,
+  .carousel__navigation-item {
+    display: inline-block;
+  }
+  
+  .carousel__navigation-button {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #333;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+  }
+  
+  .carousel::before,
+  .carousel::after,
+  .carousel__prev,
+  .carousel__next {
+    position: absolute;
+    top: 0;
+    margin-top: 20%;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+  }
+  
+  .carousel::before,
+  .carousel__prev {
+    left: -1rem;
+  }
+  
+  .carousel::after,
+  .carousel__next {
+    right: -1rem;
+  }
+  
+  .carousel::before,
+  .carousel::after {
+    content: '';
+    z-index: 1;
+    background-color: #333;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+  }
+  
+  .carousel::before {
+    /*background-image: url("../img/pizza1.jpg");*/
+    background: url("../img/fondo2.jpg");
+  }
+  
+  .carousel::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+  }

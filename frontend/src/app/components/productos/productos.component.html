@@ -5,7 +5,7 @@
 <br>
 <br>
 
-<form #productoForm="ngForm" (ngSubmit)= "addProducto(productoForm)">
+<form class=myestilo #productoForm="ngForm" (ngSubmit)= "addProducto(productoForm)">
 <div class="card">
    <div class="row">
      <input type="hidden" name="_id" #id="ngModel" [(ngModel)]="productoService.selectedProducto._id">
@@ -69,8 +69,11 @@
        <div class="col-12">
         <br>
         <br>
-      <p class="text-center"><button class="btn btn-primary">Guardar</button></p>
-         <button class="btn btn-primary right" (click)='resetForm(productoForm)'>Limpiar</button>
+      <p class=centrado>
+        <button class="button-edit">Guardar</button>
+        <button class="button-delete" (click)='resetForm(productoForm)'>Limpiar</button>
+      </p>
+         
    
     </div>
      
@@ -93,7 +96,7 @@
   <br>
   <br>
   <h4 class="text-center"> Tabla de Productos</h4>
-  <table class="table table-hover">
+  <table mat-table class="table table-hover">
     <thead>
       <th>Nombre</th>
       <th>Categoria</th>
@@ -108,8 +111,8 @@
         <td>{{producto.descripcion}}</td>
         <td>{{producto.precio}}</td>
         <td>
-          <a  class="btn" (click)="editProducto(producto)">Editar </a>
-          <a class="btn" (click)="deleteProducto(producto._id)">  Eliminar</a>
+          <a  class="button-edit" (click)="editProducto(producto)">Editar </a>
+          <a class="button-delete" (click)="deleteProducto(producto._id)">  Eliminar</a>
         </td>
       </tr>
     </tbody>
